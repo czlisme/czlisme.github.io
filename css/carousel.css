@@ -3,6 +3,7 @@
   height: 4.3rem;
   position: relative;
   background: #fff;
+  overflow: hidden;
 }
 .g_carousel-container .g_carousel-list {
   height: 100%;

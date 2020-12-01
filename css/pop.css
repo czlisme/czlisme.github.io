@@ -150,7 +150,7 @@
 }
 #popVideo .pop_inner .pop_close {
   top: -0.4rem;
-  z-index: 30;
+  z-index: 1000;
 }
 #popDetail p {
   width: 80%;
