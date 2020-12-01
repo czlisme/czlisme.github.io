@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>英雄联盟手游官网</title>
+    <!-- 重置样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <!-- rem布局手机端 -->
+    <!-- 菜单样式 -->
+    <link rel="stylesheet" href="./css/menu.css">
+    <!-- 弹出框样式 -->
+    <link rel="stylesheet" href="./css/pop.css">
+    <!-- 页面样式 -->
+    <!-- 第一页page页样式 -->
+    <link rel="stylesheet" href="./css/onepage.css">
+    <!-- 第二页轮播图样式 -->
+    <link rel="stylesheet" href="./css/carousel.css">
+    <!-- 新闻样式 -->
+    <link rel="stylesheet" href="./css/news.css">
+    <!--第三页样式  -->
+    <link rel="stylesheet" href="./css/three.css">
+    <script>
+        ~~ function() {
+            function setFont() {
+                var html = document.documentElement; //获取html
+                var designwidth = 750; //设置设计稿宽度
+                html.style.fontSize = (html.clientWidth / designwidth) * 100 + 'px'; //设置根元素
+            };
+            setFont();
+            window.onresize = setFont;
+        }() //iife 立即执行
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="menu_container">
+        <!-- 菜单栏 -->
+        <div class="menu_title">
+            <a href="" class="menu_logo"><img src="./assets/logo.png" alt="英雄联盟logo"></a>
+            <div class="menu_switch"></div>
+            <div class="menu_attend" onclick="showPop('popAttend')">敬请关注</div>
+        </div>
+        <!-- 导航栏 -->
+        <ul class="menu_nav ">
+            <li onclick="showPop('popAttend')">敬请关注</li>
+            <li>新闻资讯</li>
+            <li>游戏特色</li>
+            <a href="">
+                <li>问题反馈</li>
+            </a>
+            <li onclick="showPop('popFaq')">FAQ</li>
+        </ul>
+    </div>
+    <!-- 敬请关注弹出层 -->
+    <div class="pop_container" id="popAttend" style="display: none;">
+        <div class="pop_inner">
+            <!-- 公共类弹出层 -->
+            <p class="pop_title">请选择预约平台</p>
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_mid_content">
+                    <div class="pop_mid_bg"></div>
+                    <div class="pop_logo">
+                        <div class="pop_logoQq"></div>
+                        <div class="pop_logoWx"></div>
+                    </div>
+                    <a href="" class="pop_botton">确定</a>
+                </div>
+            </div>
+            <!-- 根据内容撑开高度 -->
+            <div class="pop_bottom"></div>
+            <div class="pop_close">x</div>
+        </div>
+    </div>
+    <!-- Faq弹出层 -->
+    <div class="pop_container" id="popFaq" style="display: none;">
+        <div class="pop_inner">
+            <!-- 公共类弹出层 -->
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_mid_content">
+                    <ul class="pop_faq">
+                        <li>
+                            <p class="pop_q">Q：活动的持续时间是多久？</p>
+                            <p class="pop_ans">
+                                A：活动时间：2019年10月16日至游戏不删档测试开启当天0点结束
+                            </p>
+                        </li>
+                        <li>
+                            <p class="pop_q">
+                                Q：使用同一个帐号在各个渠道都进行了预约，预约奖励能够叠加吗？
+                            </p>
+                            <p class="pop_ans">
+                                A：亲爱的召唤师，预约的奖励每个账号只能领取一份，是不能叠加的。关注并参与后续其他预约活动，还有更加丰富的奖励可以领取哦！
+                            </p>
+                        </li>
+                        <li>
+                            <p class="pop_q">Q：预约奖励应该如何领取？</p>
+                            <p class="pop_ans">
+                                A：
+                                <span>使用QQ预约</span> ：预约成功后，预约礼包将以卡券形式发放至：动态-游戏-礼包-礼券仓库，游戏不删档测试开启后可以兑换领取。对于未收到卡券的玩家，预约奖励将在游戏不删档上线后，在游戏中通过邮件发放至预约的账户中。请各位召唤师耐心等待~
+                            </p>
+                            <p class="pop_ans">
+                                <span class="txit">使用微信预约</span> ：预约成功后，预约礼包将通过卡券的形式发放至：我-卡包-卡券，游戏不删档测试开启后可以兑换领取。对于未收到卡券的玩家，预约奖励将在游戏不删档上线后，在游戏中通过邮件发放至预约的账户中。请各位召唤师耐心等待~
+                            </p>
+                        </li>
+                        <li>
+                            <p class="pop_q">Q：预约失败，遇到了问题怎么办？</p>
+                            <p class="pop_ans">
+                                A：如果您遇到了任何特殊情况及问题，请点击链接提交您的问题，后续会有客服为您处理：
+                                <a href="https://kf.qq.com/touch/bill/191010selfqad0ca8c2d.html" target="_blank">
+                                kf.qq.com/touch/bill/191010selfqad0ca8c2d.html
+                              </a>
+                            </p>
+                        </li>
+                    </ul>
+                    <a href="" class="pop_botton"></a>
+                </div>
+            </div>
+            <!-- 根据内容撑开高度 -->
+            <div class="pop_bottom"></div>
+            <div class="pop_close">x</div>
+
+        </div>
+    </div>
+    <!-- 弹窗-视频 -->
+    <div class="pop_container" id="popVideo" style="display: none">
+        <!-- 居中的弹窗容器 -->
+        <div class="pop_inner">
+            <video controls src="./assets/adv.mp4" id=""></video>
+            <div class="pop_close">x</div>
+        </div>
+    </div>
+    <!-- 弹窗-游戏详情 -->
+    <div class="pop_container" id="popDetail" style="display: none">
+        <div class="pop_inner">
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_content">
+                    <p>
+                        十年陪伴，无限热爱！风靡全球的MOBA经典之作——《英雄联盟》正版手游敬请关注！
+                        <br /> 真正的5V5公平竞技对战，传承端游纯正体验。人气英雄，经典还原；公平竞技，实力至上；峡谷传说，掌心再现。策略、战术、意识、配合，在移动端重现峡谷战场乐趣。
+                        <br /> 集结吧召唤师——欢迎来到英雄联盟，是时候展现真正的技术了！
+                    </p>
+                </div>
+            </div>
+            <div class="pop_bottom"></div>
+            <span class="pop_close">x</span>
+        </div>
+    </div>
+    <!-- 弹窗-微信 -->
+    <div class="pop_container" id="popWeixin" style="display: none">
+        <div class="pop_inner">
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_content">
+                    <img src="./assets/qrcode_wx.jpg" alt="" />
+                </div>
+            </div>
+            <div class="pop_bottom"></div>
+            <span class="pop_close">x</span>
+        </div>
+    </div>
+    <!-- 弹窗-微信 -->
+    <div class="pop_container" id="popYxq" style="display: none">
+        <div class="pop_inner">
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_content">
+                    <img src="./assets/qrcode_yxq.jpg" alt="" />
+                </div>
+            </div>
+            <div class="pop_bottom"></div>
+            <span class="pop_close">x</span>
+        </div>
+    </div>
+    <!-- 弹窗-掌盟 -->
+    <div class="pop_container" id="popZm" style="display: none">
+        <div class="pop_inner">
+            <div class="pop_top"></div>
+            <div class="pop_mid">
+                <div class="pop_content">
+                    <img src="./assets/qrcode_zm.jpg" alt="" />
+                </div>
+            </div>
+            <div class="pop_bottom"></div>
+            <span class="pop_close">x</span>
+        </div>
+    </div>
+    <!-- 滑动页面 -->
+    <div class="page_container">
+
+        <!-- 第一页 -->
+        <div class="page">
+            <div class="one_page">
+                <div class="one_slogo">
+                    <span class="video_play " onclick="showPop('popVideo')"></span>
+                </div>
+                <div class="attend_button " onclick="showPop( 'popAttend') "></div>
+                <div class="g_arrow "></div>
+            </div>
+        </div>
+        <!-- 第二页 -->
+        <div class="page">
+            <!-- 第二页 -->
+            <div class="news_container">
+                <!-- 轮播图 -->
+                <div class="g_carousel-container" id="newsCarousel">
+                    <ul class="g_carousel-list"></ul>
+                    <ul class="g_carousel-indicator"></ul>
+                </div>
+                <div class="news_bar">
+                    <a href="" class="news_title selected">新闻</a>
+                    <a href="https://lolm.qq.com/m/news_list.html" class="news_title">
+                  更多
+                </a>
+                </div>
+                <ul class="news_list"></ul>
+            </div>
+        </div>
+        <!-- 第三页 -->
+        <div class="page ">
+            <div class="game_container ">
+                <!-- 轮播图 -->
+                <div class="g_carousel-container " id="gameCarousel">
+                    <ul class="g_carousel-list "></ul>
+                    <ul class="g_carousel-indicator "></ul>
+                    <div class="g_carousel-prev "></div>
+                    <div class="g_carousel-next "></div>
+                </div>
+
+                <div class="game_desc ">
+                    风靡全球的MOBA经典之作《英雄联盟》正版手游预约正式开启!
+                </div>
+
+                <div class="game_detail " onclick="showPop( 'popDetail') "></div>
+
+                <div class="game_brand ">
+                    <div class="game_brand-item " onclick="showPop( 'popWeixin') "></div>
+                    <div class="game_brand-item " onclick="showPop( 'popYxq') "></div>
+                    <a href="//s.p.qq.com/pub/jump?d=AADzqr1P " target="_blank " class="game_brand-item "></a>
+                    <a href="//weibo.com/u/7268748742 " target="_blank " class="game_brand-item "></a>
+                    <div class="game_brand-item " onclick="showPop( 'popZm') "></div>
+                </div>
+
+                <div class="game_footer ">
+                    <a href=" " class="game_logo "></a>
+                    <a href=" " class="game_riot "></a>
+                    <p>COPYRIGHT © 1998 - 2019 TENCENT.ALL RIGHTS RESERVED.</p>
+                    <p>腾讯公司 版权所有</p>
+                    <p>
+                        <a href=" ">粤网文[2017]6138-1456号</a>
+                        <span>|</span>
+                        <a href=" ">（总）网出证（粤）字第057号</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js 通用api -->
+    <script src="./js/commmon.js "></script>
+    <!-- 菜单 -->
+    <script src="./js/menu.js "></script>
+    <!-- 弹出层 -->
+    <script src="./js/pop.js "></script>
+    <!-- 页面 -->
+    <script src="./js/onepage.js "></script>
+    <!-- 轮播图 -->
+    <script src="./js/carousel.js "></script>
+    <!-- 新闻页面 -->
+    <script src="./js/news.js "></script>
+    <!-- --第三页样式 -->
+    <script src="./js/three.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+img {
+    display: block;
+}
+
+p,
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* 页面的全局样式 */
+
+.page_container .page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 0.98rem;
+    box-sizing: border-box;
+    background: #202629;
+    overflow: hidden;
+}
